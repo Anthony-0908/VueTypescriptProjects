@@ -1,11 +1,6 @@
 <template>
   <div class="app">
-    <!-- hello, hyrule
-    <p>{{ name }}</p>
-    <p>{{age}}</p>
-    <button @click="changeName('Zelda')">change name</button>
-    <button @click="changeAge(23)">change age </button> -->
-    <p> {{jobs[0].location}}</p>
+    <JobList :jobs="jobs"/>
   </div>
 </template>
 
@@ -13,12 +8,12 @@
 import { defineComponent, reactive, toRefs, ref  } from 'vue';
 
 import HelloWorld from './components/HelloWorld.vue';
-
+import JobList from './components/JobList.vue';
 import Job from './types/Job';
 
 export default defineComponent({
   name: 'App',
- 
+  components:{JobList},
 
   setup(){
 
